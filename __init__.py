@@ -16,7 +16,7 @@
 
 import bpy, platform, os, stat
 
-from . preferences          import PreferencesPanel
+from . preferences          import PreferencesPanel, T3DN_OT_bip_showcase_install_pillow
 from . properties           import TexturesToExport, UI_UL_TexturePackList, Properties
 from . preview_parsers      import CollectionImageParser, NodesParser
 from . preview_helper       import PreviewHelper
@@ -148,7 +148,7 @@ bl_info = {
 }
 
 ops = [
-    PreferencesPanel,
+    PreferencesPanel,T3DN_OT_bip_showcase_install_pillow,
     TexturesToExport,
     Properties,
     ImportPanel,

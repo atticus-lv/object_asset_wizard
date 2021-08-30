@@ -14,7 +14,8 @@
 # along with this program; if not, write to the Free Software Foundation,
 # Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
 
-import bpy, bpy.utils.previews, os
+import bpy, os
+from .t3dn_bip import previews
 
 class CollectionList:
     """
@@ -35,7 +36,7 @@ class CollectionList:
         """
         self.items.clear()
         if self.collection:
-            bpy.utils.previews.remove(self.collection)
+            previews.remove(self.collection)
 
 
 class PreviewHelper:

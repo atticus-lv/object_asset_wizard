@@ -2,6 +2,8 @@
 #
 
 import bpy
+from .t3dn_bip import previews
+
 
 class IconHelper:
 
@@ -9,12 +11,12 @@ class IconHelper:
 
     @staticmethod
     def init():
-        IconHelper.icons = bpy.utils.previews.new()
+        IconHelper.icons = previews.new()
 
     
     @staticmethod
     def dispose():
-        bpy.utils.previews.remove(IconHelper.icons)
+        previews.remove(IconHelper.icons)
 
 
     @staticmethod

@@ -19,6 +19,8 @@ import bpy, os
 from . preferences          import PreferencesPanel
 from . utils                import parse_entry_list, split_entry, ASSET_TYPE_OBJECT
 
+from .t3dn_bip import previews
+
 class CollectionImageParser:
     """
     Parser for PreviewHelper. Parses all supported objects and creates
@@ -39,7 +41,7 @@ class CollectionImageParser:
         noIcon = os.path.join(os.path.dirname(__file__), "data", "No_Icon.png")
         for entry in parse_entry_list(asset_type, category):
             if not lst.collection: # lazy init
-                lst.collection = bpy.utils.previews.new()
+                lst.collection = previews.new()
 
             imp, preview, label, mat = split_entry(entry)
             if os.path.exists(preview):
@@ -71,7 +73,7 @@ class NodesParser:
                 if group.startswith("NW_"):
                     preview = os.path.join(previews, group + ".png")
                     if not lst.collection: # lazy init
-                        lst.collection = bpy.utils.previews.new()
+                        lst.collection = previews.new()
                     if os.path.exists(preview):
                         thumb = lst.collection.load(group, preview, 'IMAGE')
                     else:
