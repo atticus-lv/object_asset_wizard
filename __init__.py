@@ -138,9 +138,9 @@ from . icon_helper          import IconHelper
 # TODO: ?Import GIMP gradients as ColorRamp
 
 bl_info = {
-    "name" : "Asset Wizard",
-    "version": (0, 3, 0),
-    "author" : "h0bB1T",
+    "name" : "Asset Wizard (fast preview)",
+    "version": (0, 3, 1),
+    "author" : "h0bB1T, Atticus",
     "description" : "Asset import and export utility.",
     "blender" : (2, 80, 0),
     "location" : "View3D",
